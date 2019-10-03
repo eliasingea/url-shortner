@@ -1,0 +1,21 @@
+{
+  "name": "url-shortner",
+  "version": "1.0.0",
+  "description": "Application that will allow users to get shortened URLs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Elias Ingea",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "hash.js": "^1.1.7",
+    "mongoose": "^5.7.3",
+    "node-cache": "^4.2.1",
+    "nodemon": "^1.19.3",
+    "path": "^0.12.7",
+    "pug": "^2.0.4"
+  }
+}

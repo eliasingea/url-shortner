@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    div.text-center
+        form(class="form-shorten" method="POST" action="/api/urls")
+            #error
+                if error
+                    p.text-danger Error!!!
+
+            - var h1Classes = ['h3', 'mb-3', 'font-weight-normal']
+            h1(class=h1Classes) Su.rl URL Shortner
+
+            //-input email
+            label( for="url" class="sr-only") URL
+            input(type="url" name="url" id="url" class="form-control" placeholder="Url" required autofocus)
+
+            //-signIn button
+            - var buttonClass=['btn', 'btn-lg', 'btn-primary', 'btn-block'];
+            button(class=buttonClass type="submit") Shorten
+    div.shortened-url
+        a(href=`${originalUrl}`, target="_blank") #{shortenedUrl}
